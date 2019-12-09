@@ -1,0 +1,111 @@
+@mixin transition($time){
+  -webkit-transition: all $time linear;
+  -moz-transition: all $time linear;
+  -o-transition: all $time linear;
+  transition: all $time linear;
+}
+
+
+
+.sidebar{
+
+
+  > ul{
+    > li > a{text-transform: uppercase}
+  }
+  
+  ul{
+     text-transform: uppercase;
+    li{
+      display: block;
+      a{
+        position: relative;
+        display: block;
+        font-size: 1.3rem;
+        padding: 1.5rem 2rem;
+        color: $color-gray-light-2;
+        text-decoration: none;
+        border-bottom: 1px solid $color-gray-dark-2;
+        @include transition(.3s);
+        
+        em{
+          font-size: 1.6rem;
+          position: absolute;
+          right:2rem;
+          top: 50%;
+          transform: translateY(-50%);
+          padding:.5rem;
+          border-radius: 50%
+        }
+      }
+      
+      &:hover,
+      &.selected{
+        > a{
+          background-color:$color-primary;
+          color: $color-gray-light-1;
+          border-color: $color-gray-dark-2;
+        }
+      }
+      
+      ul{
+        display: none;
+        
+        &.open{display: block}
+        li{
+          a{
+            color:$color-gray-light-1;
+            border-color: $color-gray-dark-2;
+            
+            &:before{
+              content: '';
+              width: 10px;
+              height: 1px;
+              margin-right: 5px;
+              display: inline-block;
+              vertical-align: middle;
+              background-color:$color-primary;
+              @include transition(.2s);
+            }
+          }
+          &:hover,
+          &.selected{
+            > a{
+              background-color: $color-gray-dark-1;
+              
+              &:before{margin-right: 10px}
+            }
+          }
+          
+          &.selected.selected--last{
+            > a{
+              background-color:$color-gray-dark-1;
+              color:$color-gray-light-1;
+              &:before{background-color:$color-primary-light}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$colour1: lighten($color-gray-dark-1, 1%);
+$colour2: lighten($color-gray-dark-1, 5%);
+$colour3: lighten($color-gray-dark-1, 10%);
+$colour4: lighten($color-gray-dark-1, 15%);
+$colour5: lighten($color-gray-dark-1, 20%);
+$colour6: lighten($color-gray-dark-1, 25%);
+$colour7: lighten($color-gray-dark-1, 30%);
+$colour8: lighten($color-gray-dark-1, 35%);
+$colour9: lighten($color-gray-dark-1, 40%);
+$colour10: lighten($color-gray-dark-1, 45%);
+
+$colors: $colour1, $colour2, $colour3, $colour4, $colour5, $colour6, $colour7, $colour8, $colour9, $colour10;
+
+@each $colour in $colors {
+    $i: index($colors, $colour);
+    .subMenuColor#{$i} {
+        background-color: $colour;
+    }
+}

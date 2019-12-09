@@ -5,22 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" contnet="ie-edge">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/icon-fonts.css">
+<link rel="stylesheet" href="DataTables/datatables.min.css">
+<link rel="stylesheet" href="DataTables/Responsive-2.2.3/css/responsive.dataTables.min.css">
 <link rel="stylesheet" href="css/main.min.css">
-<title>Booking | Home </title>
+<script src="js/jQuery-v3.4.1.js"></script>
+<title>Admin Template | Dashboard </title>
 </head>
 <body>
 
-    <div class="container">
+    <div class="wraper">
         <header class="header">
             <img src="img/logo.png" alt="" class="logo">
-            <form action="" class="search">
+            <!-- <form action="" class="search">
                 <input type="text" class="search__input" placeholder="Search Hotels">
                 <button class="search__button">
                     <svg class="search__icon">
                         <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
                     </svg>
                 </button>
-            </form>
+            </form> -->
             <nav class="user-nav">
                 <div class="user-nav__icon-box">
                     <svg class="user-nav__icon">
@@ -35,7 +39,10 @@
                         <span class="user-nav__notification">3</span>
                     </div>
                     <div class="user-nav__user">
-                        <img src="img/dillan.jpg" alt="" class="user-nav__user-photo">
+                        <div class="user-nav__user-photo">
+                          <!-- <img src="img/dillan.jpg" alt=""> -->
+                        </div>
+                        
                         <span class="user-nav__user-name">Dillan</span>
                         <ul class="dropdown">
                             <li><a href="#">View Profile</a></li>
@@ -47,171 +54,225 @@
                     
             </nav>
         </header>
-        <div class="content">
+        <div class="content-wraper">
             <nav class="sidebar">
-                <ul class="side-nav">
-                    <li class="side-nav__item side-nav__item--active">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-home"></use>   
-                            </svg>
-                            <span>Hotel</span>
-                        </a>
+                <ul>
+                        <li class="selected"><a href="#">main menu</a></li>
+                    <li><a href="#">main menu <em class="icon icon-arrows-down"></em></a>
+                        <ul>
+                            <li><a href="#">sub menu <em class="icon icon-arrows-down"></em></a>
+                            <ul>
+                                <li><a href="#">child menu</a></li>
+                                <li><a href="#">child menu</a></li>
+                                <li><a href="#">child menu <em class="icon icon-arrows-down"></em></a>
+                                    <ul>
+                                        <li><a href="#">third menu</a></li>
+                                        <li><a href="#">third menu</a></li>
+                                        <li><a href="#">third menu</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </li>
+                            <li><a href="#">sub menu <em class="icon icon-arrows-down"></em></a>
+                                <ul>
+                                        <li><a href="#">third menu</a></li>
+                                        <li><a href="#">third menu</a></li>
+                                        <li><a href="#">third menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">sub menu</a></li>
+                        </ul>
                     </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>   
-                            </svg>
-                            <span>Flight</span>
-                        </a>
+                    <li><a href="#">main menu</a></li>
+                    <li><a href="#">main menu</a></li>
+                    <li><a href="#">main menu <em class="icon icon-arrows-down"></em></a>
+                        <ul>
+                                <li><a href="#">sub menu</a></li>
+                                <li><a href="#">sub menu</a></li>
+                        </ul>
                     </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-key"></use>   
-                            </svg>
-                            <span>Car rental</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-map"></use>   
-                            </svg>
-                            <span>Tours</span>
-                        </a>
-                    </li>
+                    <li><a href="#">main menu</a></li>
+                    <li><a href="#">main menu</a></li>
                 </ul>
                 <div class="legal">
                     &copy; 2019 Dillan all rights reserved
                 </div>
             </nav>
-            <main class="hotel-view">
-      <div class="gallery">
+         
+                <div class="content-side">
+                  
                     
-               <figure class="gallery__item">
-                   <img src="img/img_01.jpg" alt="" class="gallery__photo">
-               </figure>
-
-               <figure class="gallery__item">
-                <img src="img/img_02.jpg" alt="" class="gallery__photo">
-            </figure>
-
-            <figure class="gallery__item">
-                <img src="img/img_03.jpg" alt="" class="gallery__photo">
-            </figure>
-        </div>
-                   
-        <div class="overview">
-            <h1 class="overview__heading">
-                Genie Delicious
-            </h1>
-            <div class="overview__stars">
-                <svg class="overview__icon-star">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon-star">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon-star">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon-star">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon-star">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                </svg>
+        <div class="row">
+            <div class="col-2-of-2">
+                    <h2>Charts and Texts</h2>
             </div>
-            <div class="overview__location">
-                <svg class="overview__icon-location">
-                    <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-                </svg>
-                <button class="btn-inline">Trivandrum, Kerala</button>
-            </div>
-            <div class="overview__rating">
-                <div class="overview__rating-avarage">8.9</div>
-                <div class="overview__rating-count">640 votes</div>
-            </div>
-        </div>
-
-<div class="detail">
-    <div class="description">
-<p class="paragraph">
-    Aliquam ligula sem, lobortis a elit eget, aliquet aliquam mauris. In commodo, eros nec viverra dignissim, arcu odio ornare sem, ut volutpat magna purus non felis. Integer bibendum nisl ac iaculis tristique. Nullam et purus risus. Cras aliquet a erat in pretium. Vestibulum a ornare ex, ut ultrices orci. Maecenas pulvinar consequat ultricies. 
-</p>
-<p class="paragraph">
-    Nam tempor rhoncus purus eget finibus. Proin varius tincidunt velit quis vulputate. Cras euismod magna nulla, sed molestie purus euismod non. Vestibulum at semper mauris. Morbi scelerisque justo in justo lacinia semper.
-    </p>
-    <ul class="list">
-        <li class="list__item">Close to the beach</li>
-        <li class="list__item">Breakfast included</li>
-        <li class="list__item">Free airport shuttle</li>
-        <li class="list__item">Free wifi in all rooms</li>
-        <li class="list__item">Air conditioning and heating</li>
-        <li class="list__item">Pets allowed</li>
-        <li class="list__item">We speak all languages</li>
-        <li class="list__item">Perfect for families</li>
-    </ul>
-
-    <div class="recommend">
-        <p class="recommend__count">
-            Anna and 3 other friends recommend this hotel.
-        </p>
-        <div class="recommend__friends">
-            <img src="img/user-3.jpg" alt="Friend 1" class="recommend__photo">
-            <img src="img/user-4.jpg" alt="Friend 2" class="recommend__photo">
-            <img src="img/user-5.jpg" alt="Friend 3" class="recommend__photo">
-            <img src="img/user-6.jpg" alt="Friend 4" class="recommend__photo">
-        </div>
-    </div>
-    </div>
- 
-    <div class="user-reviews">
-        <figure class="review">
-            <blockquote class="review__text">
-                Sed aliquet tristique dui. Phasellus sit amet diam tincidunt, sagittis neque sit amet, consequat nisl. 
-            </blockquote>
-            <figcaption class="review__user">
-                <img src="img/user-2.jpg" alt="" class="review__photo">
-                <div class="review__user-box">
-                   <p class="review__user-name">Maria Philip</p>
-                   <p class="review__user-date">Feb 10 2019</p>
+                <div class="col-1-of-2">
+                        
+                        <div id="piechart_div"></div>
                 </div>
-                <div class="review__rating">8.2</div>
-            </figcaption>
-        </figure>
-
-        <figure class="review">
-            <blockquote class="review__text">
-                Vitae tortor condimentum lacinia quis. Dolor magna eget est lorem ipsum dolor sit amet consectetur.
-            </blockquote>
-            <figcaption class="review__user">
-                <img src="img/user-1.jpg" alt="" class="review__photo">
-                <div class="review__user-box">
-                   <p class="review__user-name">John Lenon</p>
-                   <p class="review__user-date">Aug 30 2019</p>
+                <div class="col-1-of-2">
+                        
+                        <div id="donutchart"></div>
                 </div>
-                <div class="review__rating">9.1</div>
-            </figcaption>
-        </figure>
-<button class="btn-inline">Show All <span>&rarr;</span></button>
-    </div>
-</div>
+                <div class="col-2-of-3">
+                        <div id="barchart_div"></div>
+                </div>
+                <div class="col-1-of-3">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempora aliquam reprehenderit sed delectus error, officiis sint! Consequuntur maiores reiciendis aspernatur vitae et placeat tempore obcaecati. Minima unde error aliquid!
+                        </p>
+                    </div>
+                    <div class="col-1-of-2">
+                            <div id="regions_div"></div>
+                    </div>
+                    <div class="col-1-of-2">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum id, debitis libero iusto sit fugiat beatae! Voluptatibus quos, rem, exercitationem reiciendis possimus excepturi consectetur asperiores cupiditate corrupti delectus eos iste.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus harum placeat, nesciunt consectetur itaque a odio? Id autem ex explicabo at consequatur, hic itaque animi aut aspernatur saepe, ea nemo!
+                            </p>
+                    </div>
+                    <div class="col-2-of-2">
+                        
+                            <div id="chart_lines"></div>
+                     </div>
+                     <div class="col-2-of-2">
 
-<div class="cta">
-    <h2 class="cta__book-now">
-        Condimentum!! vitae sapien pellentesque habitant.
-    </h2>
-    <button class="btn">
-            <span class="btn__visible">Book Now</span>
-        <span class="btn__invisible">Filling Fast</span>
-    </button>
-    </div>
-        </main>
+                                <table id="table_id" class="display responsive nowrap" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Column 1</th>
+                                    <th>Column 2</th>
+                                    <th>Column 3</th>
+                                    <th>Column 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Row 1 Data 1</td>
+                                    <td>Row 1 Data 2</td>
+                                    <td>Row 1 Data 3</td>
+                                    <td>Row 1 Data 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 2 Data 1</td>
+                                    <td>Row 2 Data 2</td>
+                                    <td>Row 2 Data 3</td>
+                                    <td>Row 2 Data 4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                  
+                     </div>
+                </div>
+            
+            </div>
+       
         </div>
     </div>
+
+    <div class="float-nav">
+            <input type="checkbox" id="toggle">
+            <label for="toggle" id="menu-toggle"></label>
+            <ul>
+              <label for="toggle" id="menu-close">
+                    <svg class="close-label">
+                            <use xlink:href="img/sprite.svg#icon-cross"></use>   
+                        </svg>
+              </label>
+              <li><a href="#">Hasellus bibendum </a></li>
+              <li><a href="#">Urna vitae</a></li>
+              <li><a href="#">Bibendum</a></li>
+            </ul>
+        </div>
+
+
+<!--
+        <section class="grid-test">
+            <div class="row">
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-2-of-3">
+                    Col 2 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-2-of-4">
+                    Col 2 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-3-of-4">
+                    Col 3 of 4
+                </div>
+            </div>
+        </section>
+        -->
+  <script>
+                $(document).ready( function () {
+    $('#table_id').DataTable(
+        {
+    responsive: true
+}
+    );
+} );
+
+
+  </script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/charts.js"></script> 
+        <script src="DataTables/datatables.min.js"></script>
+        <script src="DataTables/Responsive-2.2.3/js/dataTables.responsive.min.js"></script>
+       <script src="js/sidebar.js"></script>   
   
 </body>
 </html>

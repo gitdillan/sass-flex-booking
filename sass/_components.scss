@@ -1,3 +1,10 @@
+p{margin-bottom: 1.5rem;}
+.responsive-width{width: 80%; overflow-x: scroll;}
+
+main{
+    display: flex;
+    flex: 1;
+}
 .logo{
     height: 3.25rem;
     margin-left: 2rem;
@@ -11,14 +18,14 @@
     @media only screen and (max-width:$bp-smallest) {
         order: 1;
         flex: 0 0 100%;
-        background-color: var(--color-gray-light-2);
+        background-color: $color-gray-light-2;
     } 
 
     &__input{
         font-size: inherit;
         font-family: inherit;
         color: inherit;
-        background-color: var(--color-gray-light-2);
+        background-color: $color-gray-light-2;
         border: none;
         padding: .7rem 2rem;
         border-radius: 10rem;
@@ -29,24 +36,24 @@
         &:focus{
             outline: none;
             width: 100%;
-            background-color: var(--color-gray-light-3);
+            background-color: $color-gray-light-3;
         }
 
         &::-webkit-input-placeholder{
             font-weight: 300;
-            color: var(--color-gray-light-4);
+            color: $color-gray-light-4;
         }
 
     }
 
     &__input:focus + &__button{
-        background-color: var(--color-gray-light-3);
+        background-color: $color-gray-light-3;
 
     }
 
     &__button{
         border: none;
-        background-color: var(--color-gray-light-2);
+        background-color: $color-gray-light-2;
         display: flex;
         cursor: pointer;
 
@@ -64,7 +71,7 @@
 
         height: 2rem;
         width: 2rem;
-        fill:var(--color-gray-dark-3);
+        fill:$color-gray-dark-3;
 
             }
         }
@@ -85,7 +92,7 @@
 
  & > *:hover{
 
-    background-color:var(--color-gray-light-2);
+    background-color:$color-gray-light-2;
  }
 
  &__icon-box,
@@ -99,7 +106,7 @@
 
      width: 2.25rem;
      height: 2.25rem;
-     fill: var(--color-gray-dark-2);
+     fill: $color-gray-dark-2;
  }
 
       &__notification{
@@ -108,7 +115,7 @@
         height: 1.75rem;
         width: 1.75rem;
         border-radius: 50%;
-        background-color: var(--color-primary);
+        background-color: $color-primary;
         color: #fff;
         position: absolute;
         top: 1.5rem;
@@ -122,26 +129,30 @@
       &__user-photo{
 
         height: 3.75rem;
+        width: 3.75rem;
           border-radius: 50%;
           margin-right: 1rem;
+          background-image:linear-gradient(to bottom, rgba($color-gray-light-3,.6) rgab($color-gray-light-1,.6)), url('../img/user.svg');
+          background-size: cover;
+            overflow: hidden;
+
+          img{max-width: 100%;}
 
          }
 
 
          &__user {
 
-            
-
             & ul{
                 font-size: 1.1rem;
                 text-transform: uppercase;
                 position: absolute;
-                z-index: 11;
+                z-index: 101;
                 top: 100%;
                 left: 0;
                 list-style: none;
                 display: none;
-                background-color:var(--color-gray-light-2);
+                background-color:$color-gray-light-2;
                 animation: moveLeft .2s ease;
                 
 
@@ -167,8 +178,8 @@
                     &:hover,
                     &:focus{
 
-                        background-color:var(--color-primary);
-                        color: var(--color-gray-light-1);
+                        background-color:$color-primary;
+                        color: $color-gray-light-1;
                         
                     }
                 }
@@ -240,7 +251,7 @@
                 left: 0;
                 height: 100%;
                 width: .3rem;
-                background-color:var(--color-primary);
+                background-color:$color-primary;
                 transform: scaleY(0);
                 transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s,
                 background-color .1s;
@@ -257,7 +268,7 @@
 
             &:active::before{
 
-                background-color: var(--color-primary-light);
+                background-color: $color-primary-light;
             }
         }
 
@@ -265,7 +276,7 @@
         &__link:link,
         &__link:visited {
 
-            color: var(--color-gray-light-1);
+            color: $color-gray-light-1;
             text-decoration: none;
             text-transform: uppercase;
             display: flex;
@@ -273,16 +284,6 @@
             padding: 1.5rem 3rem;
             position: relative;
             z-index: 10;
-
-            @media only screen and (max-width:$bp-medium) {
-               justify-content: center;
-               padding: 2rem;
-             }
-
-             @media only screen and (max-width:$bp-small) {
-                flex-direction: column;
-                padding: 1.5rem .5rem;
-              }
 
         }
         
@@ -308,7 +309,7 @@
     .legal{
 
         font-size: 1.2rem;
-        color: var(--color-gray-light-4);
+        color: $color-gray-light-4;
         padding: 2.5rem;
         text-align: center;
 
@@ -364,7 +365,7 @@
     &__icon-location{
         width: 1.75rem;
         height: 1.75rem;
-        fill: var(--color-primary);
+        fill: $color-primary;
 
         @media only screen and (max-width:$bp-xsmall) {
             width: 1.3rem;
@@ -390,7 +391,7 @@
     }
 
     &__rating{
-        background-color: var(--color-primary);
+        background-color: $color-primary;
         color: #fff;
         margin-left: 3rem;
         align-self: stretch;
@@ -444,7 +445,7 @@
 
    .btn-inline{
        border: none;
-       color: var(--color-primary);
+       color: $color-primary;
        font-size: inherit;
        border-bottom: .1rem solid currentColor;
        background-color: transparent;
@@ -459,7 +460,7 @@
         }
 
        &:hover{
-           color: var(--color-gray-dark-1);
+           color: $color-gray-dark-1;
 
            span{margin-left: .8rem;}
        }
@@ -526,7 +527,7 @@
             //background-size: cover;
 
             //newer browsers -masks
-            background-color: var(--color-primary);
+            background-color: $color-primary;
             mask-image: url(../img/SVG/chevron-small-right.svg);
             mask-size: cover;
            -webkit-mask-image: url(../img/SVG/chevron-small-right.svg);
@@ -538,7 +539,7 @@
 .recommend{
 
     font-size: 1.3rem;
-    color:var(--color-gray-dark-3);
+    color:$color-gray-dark-3;
     display: flex;
     align-items: center;
 
@@ -614,12 +615,12 @@
     &__user-date{
 
         font-size: 1rem;
-        color: var(--color-gray-dark-3);
+        color: $color-gray-dark-3;
     }
 
     &__rating{
 
-        color: var(--color-primary);
+        color: $color-primary;
         font-size: 2.2rem;
         font-weight: 300;
     }
@@ -631,7 +632,7 @@
         left: -1rem;
         font-size: 20rem;
         line-height: 1;
-        color:var(--color-gray-light-2);
+        color:$color-gray-light-2;
         font-family: sans-serif;
     }
 
@@ -662,7 +663,7 @@
     text-transform: uppercase;
     border-radius: 100px;
     border: none;
-    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -692,7 +693,7 @@
 
     &:hover{
 
-        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
     }
 
     &:hover &__visible{
@@ -716,3 +717,23 @@
 
 
     }
+
+
+    // datatable
+
+
+            .paginate_button{
+           &.current{
+                background-image: linear-gradient(to left bottom, $color-primary, $color-primary-light) !important;
+                border: none;
+                &:hover{
+
+                    background-image: linear-gradient(to left bottom, $color-primary-dark, $color-primary-light) !important;
+
+                }
+
+            }
+        }
+
+
+  

@@ -1,10 +1,9 @@
-.container{
+.wraper{
 
-    max-width: 120rem;
-    margin: 8rem auto;
-    background-color: var(--color-gray-light-1);
-    box-shadow: var(--shadow-dark);
-    min-height:50rem;
+    max-width: 95vw;
+    margin: 2.5rem auto;
+    background-color: $color-gray-light-1;
+    box-shadow:50rem;
 
     @media only screen and (max-width:$bp-largest){
 
@@ -17,8 +16,8 @@
 
 .header{
     height: 7rem;
-    background-color: #fff;
-    border-bottom:var(--line);
+    background-color: $color-white;
+    border-bottom:1px solid $color-gray-light-1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +30,7 @@
     } 
 }
 
-.content{
+.content-wraper{
     display: flex;
 
     @media only screen and (max-width:$bp-medium) {
@@ -42,25 +41,31 @@
    }
 
 .sidebar{
-    background-color:var(--color-gray-dark-1);
+    background-color:$color-gray-dark-1;
     //flex: grow shirnk width;
     flex: 0 0 18%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    @include respond(tab-port) {
+      display: none;
+     }
+
 }
 
-.hotel-view{
-    background-color:#fff;
+.content-side{
+    background-color:$color-white;
     flex: 1;
+    padding: 2rem;
+    //padding: 3rem;
 }
 
 .detail{
     font-size: 1.4rem;
     display: flex;
     padding: 4.5rem;
-    background-color:var(--color-gray-light-1);
+    background-color:$color-gray-light-1;
     border-bottom:var(--line);
 
     @media only screen and (max-width:$bp-medium) {
@@ -72,30 +77,4 @@
         flex-direction: column;
      }
      
-}
-
-.description{
-    flex: 0 0 60%;
-    margin-right: 4.5rem;
-    background-color:#fff;
-    padding: 3rem;
-    box-shadow: var(--shadow-light);
-
-    @media only screen and (max-width:$bp-medium) {
-        margin-right: 3rem;
-        padding: 2rem;
-     }
-
-     @media only screen and (max-width:$bp-small) {
-        margin-right: 0;
-        margin-bottom: 3rem;
-     }
-}
-
-.user-reviews{
-
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
